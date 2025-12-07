@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FreeAccess037 – All-in-One Tools</title>
+
+<style>
+body{
+    margin:0; font-family:Arial, sans-serif; background:#f2f2f7; color:#222;
+    }
+    header{
+        background:#0d6efd; padding:18px; text-align:center; color:white;
+        }
+        nav{
+            display:flex; justify-content:center; gap:25px; padding:12px;
+                background:white; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:10;
+                }
+                nav a{
+                    font-weight:bold; color:#0d6efd; text-decoration:none;
+                    }
+                    .container{
+                        max-width:1000px; margin:auto; padding:15px;
+                        }
+                        .section-title{
+                            font-size:22px; font-weight:bold; margin-top:30px;
+                            }
+                            .tool-box{
+                                display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px;
+                                }
+                                .tool{
+                                    background:#fff; padding:15px; border-radius:10px;
+                                        box-shadow:0 0 8px rgba(0,0,0,0.1); text-align:center; cursor:pointer;
+                                            font-weight:bold; transition:.2s;
+                                            }
+                                            .tool:hover{ transform:scale(1.05); }
+
+                                            .card{
+                                                background:white; padding:15px; margin:15px 0; border-radius:10px;
+                                                    box-shadow:0 0 10px rgba(0,0,0,0.1);
+                                                    }
+                                                    textarea,input,select{
+                                                        width:100%; padding:10px; margin-top:10px; border-radius:8px; border:1px solid #ccc;
+                                                        }
+                                                        button{
+                                                            width:100%; padding:10px; margin-top:10px; cursor:pointer;
+                                                                background:#0d6efd; border:none; color:white; border-radius:8px; font-weight:bold;
+                                                                }
+                                                                button:hover{ background:#005ec2; }
+                                                                </style>
+
+                                                                </head>
+                                                                <body>
+
+                                                                <header>
+                                                                    <h2>FreeAccess037 – All-in-One Tools</h2>
+                                                                        <p>Free utilities, converters, downloaders & more</p>
+                                                                        </header>
+
+                                                                        <nav>
+                                                                            <a href="#home">Home</a>
+                                                                                <a href="#tools">Tools</a>
+                                                                                    <a href="#download">Downloaders</a>
+                                                                                    </nav>
+
+                                                                                    <div class="container">
+
+                                                                                    <!-- HOME -->
+                                                                                    <section id="home">
+                                                                                        <h2 class="section-title">Welcome</h2>
+                                                                                            <div class="card">
+                                                                                                    <p>Welcome to FreeAccess037. Your free online toolbox containing text tools, converters, calculators, 
+                                                                                                            YouTube downloader, Instagram downloader, and more.</p>
+                                                                                                                </div>
+                                                                                                                </section>
+
+                                                                                                                <!-- TOOL BUTTONS -->
+                                                                                                                <section id="tools">
+                                                                                                                <h2 class="section-title">Tools</h2>
+
+                                                                                                                <div class="tool-box">
+                                                                                                                    <div class="tool" onclick="goto('textCounter')">Text Counter</div>
+                                                                                                                        <div class="tool" onclick="goto('wordCounter')">Word Counter</div>
+                                                                                                                            <div class="tool" onclick="goto('upper')">Uppercase</div>
+                                                                                                                                <div class="tool" onclick="goto('lower')">Lowercase</div>
+                                                                                                                                    <div class="tool" onclick="goto('calc')">Calculator</div>
+                                                                                                                                        <div class="tool" onclick="goto('bmi')">BMI Calculator</div>
+                                                                                                                                            <div class="tool" onclick="goto('age')">Age Calculator</div>
+                                                                                                                                                <div class="tool" onclick="goto('pass')">Password Generator</div>
+                                                                                                                                                    <div class="tool" onclick="goto('qr')">QR Generator</div>
+                                                                                                                                                        <div class="tool" onclick="goto('ytThumb')">YouTube Thumbnail</div>
+                                                                                                                                                        </div>
+                                                                                                                                                        </section>
+
+
+                                                                                                                                                        <!-- 🔥 DOWNLOADERS SECTION -->
+                                                                                                                                                        <section id="download">
+                                                                                                                                                        <h2 class="section-title">Downloaders</h2>
+
+                                                                                                                                                        <div class="tool-box">
+                                                                                                                                                            <div class="tool" onclick="goto('ytDownloader')">YouTube Downloader</div>
+                                                                                                                                                                <div class="tool" onclick="goto('instaDownloader')">Instagram Reels Downloader</div>
+                                                                                                                                                                </div>
+                                                                                                                                                                </section>
+
+
+                                                                                                                                                                <!-- ------------- TOOLS ---------------- -->
+
+                                                                                                                                                                <!-- TEXT COUNTER -->
+                                                                                                                                                                <div class="card" id="textCounter">
+                                                                                                                                                                <h3>Text Counter</h3>
+                                                                                                                                                                <textarea id="tc"></textarea>
+                                                                                                                                                                <button onclick="countText()">Count</button>
+                                                                                                                                                                <p id="tcResult"></p>
+                                                                                                                                                                </div>
+
+                                                                                                                                                                <!-- WORD COUNTER -->
+                                                                                                                                                                <div class="card" id="wordCounter">
+                                                                                                                                                                <h3>Word Counter</h3>
+                                                                                                                                                                <textarea id="wc"></textarea>
+                                                                                                                                                                <button onclick="countWords()">Count</button>
+                                                                                                                                                                <p id="wcResult"></p>
+                                                                                                                                                                </div>
+
+                                                                                                                                                                <!-- UPPERCASE -->
+                                                                                                                                                                <div class="card" id="upper">
+                                                                                                                                                                <h3>Uppercase Converter</h3>
+                                                                                                                                                                <textarea id="up"></textarea>
+                                                                                                                                                                <button onclick="upperCase()">Convert</button>
+                                                                                                                                                                <p id="upResult"></p>
+                                                                                                                                                                </div>
+
+                                                                                                                                                                <!-- LOWERCASE -->
+                                                                                                                                                                <div class="card" id="lower">
+                                                                                                                                                                <h3>Lowercase Converter</h3>
+                                                                                                                                                                <textarea id="low"></textarea>
+                                                                                                                                                                <button onclick="lowerCase()">Convert</button>
+                                                                                                                                                                <p id="lowResult"></p>
+                                                                                                                                                                </div>
+
+                                                                                                                                                                <!-- CALCULATOR -->
+                                                                                                                                                                <div class="card" id="calc">
+                                                                                                                                                                <h3>Calculator</h3>
+                                                                                                                                                                <input id="n1" type="number" placeholder="Number 1">
+                                                                                                                                                                <input id="n2" type="number" placeholder="Number 2">
+                                                                                                                                                                <select id="op">
+                                                                                                                                                                    <option value="+">Add</option>
+                                                                                                                                                                        <option value="-">Subtract</option>
+                                                                                                                                                                            <option value="*">Multiply</option>
+                                                                                                                                                                                <option value="/">Divide</option>
+                                                                                                                                                                                </select>
+                                                                                                                                                                                <button onclick="doCalc()">Calculate</button>
+                                                                                                                                                                                <p id="calcResult"></p>
+                                                                                                                                                                                </div>
+
+                                                                                                                                                                                <!-- BMI -->
+                                                                                                                                                                                <div class="card" id="bmi">
+                                                                                                                                                                                <h3>BMI Calculator</h3>
+                                                                                                                                                                                <input id="w" type="number" placeholder="Weight kg">
+                                                                                                                                                                                <input id="h" type="number" placeholder="Height cm">
+                                                                                                                                                                                <button onclick="doBMI()">Calculate</button>
+                                                                                                                                                                                <p id="bmiResult"></p>
+                                                                                                                                                                                </div>
+
+                                                                                                                                                                                <!-- AGE -->
+                                                                                                                                                                                <div class="card" id="age">
+                                                                                                                                                                                <h3>Age Calculator</h3>
+                                                                                                                                                                                <input type="date" id="dob">
+                                                                                                                                                                                <button onclick="doAge()">Calculate</button>
+                                                                                                                                                                                <p id="ageResult"></p>
+                                                                                                                                                                                </div>
+
+                                                                                                                                                                                <!-- PASSWORD -->
+                                                                                                                                                                                <div class="card" id="pass">
+                                                                                                                                                                                <h3>Password Generator</h3>
+                                                                                                                                                                                <button onclick="genPass()">Generate Password</button>
+                                                                                                                                                                                <p id="passResult"></p>
+                                                                                                                                                                                </div>
+
+                                                                                                                                                                                <!-- QR -->
+                                                                                                                                                                                <div class="card" id="qr">
+                                                                                                                                                                                <h3>QR Code Generator</h3>
+                                                                                                                                                                                <input id="qrText" placeholder="Enter text">
+                                                                                                                                                                                <button onclick="makeQR()">Generate</button>
+                                                                                                                                                                                <div id="qrOut"></div>
+                                                                                                                                                                                </div>
+
+                                                                                                                                                                                <!-- YT THUMB -->
+                                                                                                                                                                                <div class="card" id="ytThumb">
+                                                                                                                                                                                <h3>YouTube Thumbnail Downloader</h3>
+                                                                                                                                                                                <input id="ytUrl" placeholder="Paste YouTube video link">
+                                                                                                                                                                                <button onclick="ytThumb()">Get Thumbnail</button>
+                                                                                                                                                                                <div id="ytOut"></div>
+                                                                                                                                                                                </div>
+
+                                                                                                                                                                                <!-- 🔥 YOUTUBE VIDEO DOWNLOADER -->
+                                                                                                                                                                                <div class="card" id="ytDownloader">
+                                                                                                                                                                                <h3>YouTube Video Downloader</h3>
+                                                                                                                                                                                <input id="ytDL" placeholder="Paste YouTube Link">
+                                                                                                                                                                                <button onclick="downloadYT()">Download Video</button>
+                                                                                                                                                                                <div id="ytDLResult"></div>
+                                                                                                                                                                                </div>
+
+                                                                                                                                                                                <!-- 🔥 INSTAGRAM DOWNLOADER -->
+                                                                                                                                                                                <div class="card" id="instaDownloader">
+                                                                                                                                                                                <h3>Instagram Reels / Story Downloader</h3>
+                                                                                                                                                                                <input id="instaDL" placeholder="Paste Instagram Link">
+                                                                                                                                                                                <button onclick="downloadInsta()">Download</button>
+                                                                                                                                                                                <div id="instaResult"></div>
+                                                                                                                                                                                </div>
+
+                                                                                                                                                                                </div>
+
+                                                                                                                                                                                <!-- JAVASCRIPT -->
+                                                                                                                                                                                <script>
+
+                                                                                                                                                                                // SMOOTH SCROLL
+                                                                                                                                                                                function goto(id){ document.getElementById(id).scrollIntoView({behavior:"smooth"}); }
+
+                                                                                                                                                                                // TEXT TOOLS
+                                                                                                                                                                                function countText(){ 
+                                                                                                                                                                                    let t=document.getElementById("tc").value; 
+                                                                                                                                                                                        document.getElementById("tcResult").innerHTML="Characters: "+t.length;
+                                                                                                                                                                                        }
+                                                                                                                                                                                        function countWords(){
+                                                                                                                                                                                            let t=document.getElementById("wc").value.trim();
+                                                                                                                                                                                                document.getElementById("wcResult").innerHTML="Words: "+(t==""?0:t.split(/\s+/).length);
+                                                                                                                                                                                                }
+                                                                                                                                                                                                function upperCase(){ document.getElementById("upResult").innerHTML=document.getElementById("up").value.toUpperCase(); }
+                                                                                                                                                                                                function lowerCase(){ document.getElementById("lowResult").innerHTML=document.getElementById("low").value.toLowerCase(); }
+
+                                                                                                                                                                                                // CALCULATOR
+                                                                                                                                                                                                function doCalc(){
+                                                                                                                                                                                                    let a=parseFloat(document.getElementById("n1").value);
+                                                                                                                                                                                                        let b=parseFloat(document.getElementById("n2").value);
+                                                                                                                                                                                                            let op=document.getElementById("op").value;
+                                                                                                                                                                                                                document.getElementById("calcResult").innerHTML="Result: "+eval(a+op+b);
+                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                // BMI
+                                                                                                                                                                                                                function doBMI(){
+                                                                                                                                                                                                                    let w=document.getElementById("w").value;
+                                                                                                                                                                                                                        let h=document.getElementById("h").value/100;
+                                                                                                                                                                                                                            document.getElementById("bmiResult").innerHTML="BMI: "+(w/(h*h)).toFixed(2);
+                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                            // AGE
+                                                                                                                                                                                                                            function doAge(){
+                                                                                                                                                                                                                                let dob=new Date(document.getElementById("dob").value);
+                                                                                                                                                                                                                                    let diff=Date.now()-dob.getTime();
+                                                                                                                                                                                                                                        document.getElementById("ageResult").innerHTML="Age: "+(new Date(diff).getUTCFullYear()-1970);
+                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                        // PASSWORD
+                                                                                                                                                                                                                                        function genPass(){
+                                                                                                                                                                                                                                            let chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%";
+                                                                                                                                                                                                                                                let p=""; for(let i=0;i<12;i++){ p+=chars[Math.floor(Math.random()*chars.length)]; }
+                                                                                                                                                                                                                                                    document.getElementById("passResult").innerHTML=p;
+                                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                                    // QR
+                                                                                                                                                                                                                                                    function makeQR(){
+                                                                                                                                                                                                                                                        let t=document.getElementById("qrText").value;
+                                                                                                                                                                                                                                                            document.getElementById("qrOut").innerHTML=`<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${t}">`;
+                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                            // YT THUMB
+                                                                                                                                                                                                                                                            function ytThumb(){
+                                                                                                                                                                                                                                                                let url=document.getElementById("ytUrl").value;
+                                                                                                                                                                                                                                                                    let id=url.split("v=")[1];
+                                                                                                                                                                                                                                                                        if(id){
+                                                                                                                                                                                                                                                                                document.getElementById("ytOut").innerHTML=
+                                                                                                                                                                                                                                                                                        `<img width="100%" src="https://img.youtube.com/vi/${id}/maxresdefault.jpg">`;
+                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                            // YOUTUBE VIDEO DOWNLOADER
+                                                                                                                                                                                                                                                                                            function downloadYT(){
+                                                                                                                                                                                                                                                                                                let url=document.getElementById("ytDL").value;
+                                                                                                                                                                                                                                                                                                    document.getElementById("ytDLResult").innerHTML="Processing...";
+
+                                                                                                                                                                                                                                                                                                        fetch(`https://api.savefrom.net/?url=${encodeURIComponent(url)}`)
+                                                                                                                                                                                                                                                                                                            .then(r => r.json())
+                                                                                                                                                                                                                                                                                                                .then(data => {
+                                                                                                                                                                                                                                                                                                                        if(data.url){
+                                                                                                                                                                                                                                                                                                                                    document.getElementById("ytDLResult").innerHTML=
+                                                                                                                                                                                                                                                                                                                                                `<a href="${data.url}" target="_blank">Download Video</a>`;
+                                                                                                                                                                                                                                                                                                                                                        } else {
+                                                                                                                                                                                                                                                                                                                                                                    document.getElementById("ytDLResult").innerHTML="Error! Try another link.";
+                                                                                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                                                                                                });
+                                                                                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                                                                                // INSTAGRAM DOWNLOADER
+                                                                                                                                                                                                                                                                                                                                                                                function downloadInsta(){
+                                                                                                                                                                                                                                                                                                                                                                                    let url=document.getElementById("instaDL").value;
+                                                                                                                                                                                                                                                                                                                                                                                        document.getElementById("instaResult").innerHTML="Processing...";
+
+                                                                                                                                                                                                                                                                                                                                                                                            fetch(`https://snapinsta.app/action?url=${encodeURIComponent(url)}`)
+                                                                                                                                                                                                                                                                                                                                                                                                .then(r => r.text())
+                                                                                                                                                                                                                                                                                                                                                                                                    .then(html => {
+                                                                                                                                                                                                                                                                                                                                                                                                            document.getElementById("instaResult").innerHTML=html;
+                                                                                                                                                                                                                                                                                                                                                                                                                })
+                                                                                                                                                                                                                                                                                                                                                                                                                    .catch(()=>{
+                                                                                                                                                                                                                                                                                                                                                                                                                            document.getElementById("instaResult").innerHTML="Error processing link.";
+                                                                                                                                                                                                                                                                                                                                                                                                                                });
+                                                                                                                                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                </script>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                </body>
+                                                                                                                                                                                                                                                                                                                                                                                                                                </html>
