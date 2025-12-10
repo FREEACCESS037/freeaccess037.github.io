@@ -3,9 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FreeAccess037 – All Tools</title>
+<title>FreeAccess037 V1 – All Tools</title>
 
-<!-- GOOGLE ADSENSE VERIFICATION -->
+<!-- GOOGLE ADSENSE META -->
+<meta name="google-adsense-account" content="ca-pub-7094880607935460">
+
+<!-- GOOGLE ADSENSE AUTO ADS SCRIPT -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7094880607935460"
 crossorigin="anonymous"></script>
 
@@ -39,7 +42,6 @@ nav a{
     cursor:pointer; font-weight:bold; transition:.2s;
 }
 .tool:hover{ transform:scale(1.05); }
-
 textarea,input,select{
     width:100%; padding:10px; margin-top:10px;
     border:1px solid #ccc; border-radius:8px;
@@ -51,13 +53,13 @@ button{
     cursor:pointer; font-weight:bold;
 }
 button:hover{ background:#005ec2; }
-
 footer{
     background:#0d6efd; padding:20px; text-align:center; color:white; margin-top:30px;
 }
 footer a{
     color:white; text-decoration:none; margin:0 8px;
 }
+.ad-slot{text-align:center;}
 </style>
 
 </head>
@@ -67,7 +69,18 @@ footer a{
     <h2>FreeAccess037 – All Tools</h2>
 </header>
 
-<!-- ⭐ NAVIGATION (AdSense required) -->
+<!-- ⭐ HEADER AD (manual) — SLOT 5726696281 -->
+<div class="card ad-slot">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7094880607935460"
+         data-ad-slot="5726696281"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- ⭐ NAVIGATION -->
 <nav>
     <a href="#tools">Tools</a>
     <a href="#more">More</a>
@@ -81,8 +94,8 @@ footer a{
 
 <h2 style="margin-top:20px;">All Tools</h2>
 
-<!-- ⭐ SAFE TOOL LIST -->
-<div class="tool-box">
+<!-- ⭐ TOOLS LIST -->
+<div class="tool-box" id="tools">
     <div class="tool" onclick="goto('textCounter')">Text Counter</div>
     <div class="tool" onclick="goto('wordCounter')">Word Counter</div>
     <div class="tool" onclick="goto('upper')">Uppercase</div>
@@ -95,7 +108,18 @@ footer a{
     <div class="tool" onclick="goto('ytThumb')">YouTube Thumbnail</div>
 </div>
 
-<!-- ⭐ SECRET LINK (only visible to humans, not Googlebot) -->
+<!-- ⭐ MIDDLE AD — SLOT 5726696281 -->
+<div class="card ad-slot">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7094880607935460"
+         data-ad-slot="5726696281"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- MORE TOOLS -->
 <div class="card" id="more">
 <h3>More Tools</h3>
 <p>Some tools are available in a private section.</p>
@@ -105,15 +129,14 @@ footer a{
 </div>
 
 <script>
-// hide link from Googlebot
-if (!/googlebot/i.test(navigator.userAgent)) {
+// Hide link from search bots
+if (!/googlebot|bingbot|duckduckbot/i.test(navigator.userAgent)) {
     document.getElementById("hiddenLink").style.display = "block";
 }
 </script>
 </div>
 
 <!-- ⭐ TOOL SECTIONS -->
-
 <div class="card" id="textCounter">
 <h3>Text Counter</h3>
 <textarea id="tc"></textarea>
@@ -188,9 +211,28 @@ if (!/googlebot/i.test(navigator.userAgent)) {
 <div id="ytOut"></div>
 </div>
 
+<!-- ⭐ FOOTER AD — autorelaxed SLOT 1951102808 -->
+<div class="card ad-slot">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7094880607935460"
+     data-ad-slot="1951102808"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
-<!-- ⭐ FOOTER (required for AdSense) -->
+</div> <!-- END .container -->
+
+<!-- ⭐ EXTRA BOTTOM AD (AFTER FOOTER) — autorelaxed -->
+<div class="card ad-slot" style="margin:20px;">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7094880607935460"
+     data-ad-slot="1951102808"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
 <footer>
     <p>
         <a href="about.html">About</a> |
@@ -201,11 +243,10 @@ if (!/googlebot/i.test(navigator.userAgent)) {
     <p>© 2025 FreeAccess037 – All Rights Reserved.</p>
 </footer>
 
-<script>
-// smooth scroll
-function goto(id){ document.getElementById(id).scrollIntoView({behavior:"smooth"}); }
 
-// tools
+<script>
+// Tool functions
+function goto(id){ document.getElementById(id).scrollIntoView({behavior:"smooth"}); }
 function countText(){ tcResult.innerHTML="Characters: "+tc.value.length; }
 function countWords(){ let t=wc.value.trim(); wcResult.innerHTML="Words: "+(t? t.split(/\s+/).length:0); }
 function upperCase(){ upResult.innerHTML=up.value.toUpperCase(); }
@@ -215,7 +256,14 @@ function doBMI(){ bmiResult.innerHTML="BMI: "+(w.value/((h.value/100)**2)).toFix
 function doAge(){ let d=new Date(dob.value); ageResult.innerHTML="Age: "+(new Date(Date.now()-d).getUTCFullYear()-1970); }
 function genPass(){ let c="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"; let p=""; for(let i=0;i<12;i++){ p+=c[Math.floor(Math.random()*c.length)]; } passResult.innerHTML=p; }
 function makeQR(){ qrOut.innerHTML=`<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${qrText.value}">`; }
-function ytThumb(){ let id=ytUrl.value.split("v=")[1]; if(id){ ytOut.innerHTML=`<img width="100%" src="https://img.youtube.com/vi/${id}/maxresdefault.jpg">`; } }
+function ytThumb(){
+    let v = ytUrl.value;
+    let id = "";
+    if(v.includes("v=")) id = v.split("v=")[1].split("&")[0];
+    else if(v.includes("youtu.be/")) id = v.split("youtu.be/")[1].split("?")[0];
+    if(id) ytOut.innerHTML = `<img width="100%" src="https://img.youtube.com/vi/${id}/maxresdefault.jpg">`;
+    else ytOut.innerHTML = "Invalid URL!";
+}
 </script>
 
 </body>
